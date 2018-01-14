@@ -1,0 +1,353 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: url("images/space.png");
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  color: white;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-size: 90px;
+  text-shadow:
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
+}
+h2 {
+  color: white;
+  font-family: Arial sans-serif;
+  font-size: 30px;
+  text-align: left;
+  margin-top: -40px;
+  font-weight: 7;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+
+p {
+  color: black;
+  font-family: "Georgia";
+  margin-left: 13%;
+  margin-right: 2px;
+}
+
+.p2 {
+  color: white;
+  text-align: left;
+}
+
+/* This is all of the information regarding the grid setup */
+main {
+  display: grid;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  grid-template: 600px 330px / 1fr 1fr 1fr;
+  grid-template-areas:"Home Home Home"
+  "About Blog Contact"
+}
+
+.gridHome {
+  grid-area: Home;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.gridAbout {
+  grid-area: About;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gridBlog {
+  grid-area: Blog;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gridContact {
+  grid-area: Contact;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* These are all to do with the action bar on the top of the page */
+.actionBar {
+  color: white;
+  background-color: black;
+  font-family: Arial sans-serif;
+  font-size: 25px;
+  text-align: right;
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+.actionBar li {
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding: 0px 20px 0px 20px;
+}
+.actionBar li:hover,
+.actionBar li:focus {
+  color: #ffae00;
+  cursor: pointer;
+}
+.actionBar ul {
+  display: flex;
+  list-style: none;
+  margin-left: 50%;
+  padding: 0;
+  text-align: center;
+}
+
+/* These are creating the Spaceman logo */
+.spacemanLogo {
+  z-index: 3;
+  position: fixed;
+  top: 30px;
+  left: 130px;
+}
+
+.spacemanCodes {
+  position: relative;
+  top: 0px;
+  left: 320px;
+  z-index: 3;
+}
+
+.spacemanCodes2 {
+  position: absolute;
+  top: 50px;
+  left: 460px;
+  font-size: 140px;
+  z-index: 3;
+}
+
+/* This area creates the three containers for About, Blog, and Contact */
+.aboutBox {
+  position: relative;
+  width: 70%;
+  height: 85%;
+  color: black;
+  padding: 25px;
+  margin: 5% 15%;
+}
+
+.blogBox {
+  position: relative;
+  width: 70%;
+  height: 85%;
+  color: black;
+  padding: 25px;
+  margin: 5% 15%;
+}
+
+.contactBox {
+  position: relative;
+  width: 70%;
+  height: 85%;
+  color: black;
+  padding: 25px;
+  margin: 5% 15%;
+}
+
+/* This section is for the social media logos in the bottom right corner*/
+
+.socialMedia li{
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  left: -40px;
+  margin-right: 5px;
+}
+
+.socialMediaTwitter li:hover {
+  background-color: rgb(66, 156, 214);
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.socialMediaYoutube li:hover {
+  background-color: rgb(237, 32, 36);
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.socialMediaTwitch li:hover {
+  background-color: rgb(109, 45, 145);
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.socialMediaDribble li:hover {
+  background-color: rgb(240, 104, 152);
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.socialMediaInstagram li:hover {
+  background-color: rgb(255, 217, 95);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.socialMediaFacebook li:hover {
+  background-color: rgb(59, 89, 152);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.straightLine {
+    display: block;
+    height: 1px;
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-top: -20px;
+    padding: 0;
+    color: white;
+}
+
+.spacemansLog {
+  grid-area: Blog;
+  padding: 20px;
+  width: 100%;
+  height: 220px;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1em;
+  margin-left: -7%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.spacemansLog div:hover {
+  cursor: pointer;
+  transition: .5s ease;
+  box-shadow: 0px 1px 4px rgb(255, 174, 0),
+              0px 2px 17px rgb(255, 174, 0);
+}
+
+
+.spacemansLogDate {
+  font-family: "Inconsolata", sans-serif;
+  color: black;
+  background-color: white;
+  border-radius: 4px;
+  padding: 4px 7px 2px 4px;
+  box-shadow: 4px 4px 4px rgb(255, 174, 0),
+              4px 4px 4px rgb(255, 174, 0);
+  display: inline-block;
+  margin: 10px 3px 3px 10px;
+}
+
+.tag {
+  margin: 0px 10px;
+  font-weight: 2000;
+}
+
+.paperBackground {
+  position: relative;
+  background-image: url("images/paper.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 220px;
+  width: 115%;
+}
+
+.paperOverlay {
+  position: absolute;
+  grid-area: gridBlog;
+  height: 220px;
+  width: 100%;
+  transition: .7s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.delveDeeper {
+  margin-top: -57%;
+  margin-left: 48%;
+  margin-right: 10%;
+  font-size: 35px;
+  text-align: center;
+}
+
+.paperOverlay:hover {
+  opacity: 1;
+}
+
+.astronautBlog {
+  margin-top: 5%;
+}
+
+.firstContact {
+  margin-top: -122px;
+  margin-left: 38%;
+  font-size: 35px;
+}
+
+.getInTouch {
+  position: absolute;
+  grid-area: gridContact;
+  height: 99px;
+  width: 310px;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+}
+
+.getInTouch:hover {
+  cursor: pointer;
+  transition: .5s ease;
+  opacity: 1;
+  box-shadow: 0px 1px 4px rgb(255, 174, 0),
+              0px 2px 17px rgb(255, 174, 0);
+}
+.originPicture {
+  position: relative;
+  width: 100%;
+  height: 215px;
+  margin-top: 22px;
+}
+
+.originBox {
+  position: absolute;
+  grid-area: gridAbout;
+  height: 215px;
+  width: 87%;
+  margin-top: 22px;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  z-index: 2;
+}
+
+.originBox:hover {
+  cursor: pointer;
+  transition: .5s ease;
+  opacity: 1;
+  box-shadow: 0px 1px 4px rgb(255, 174, 0),
+              0px 2px 17px rgb(255, 174, 0);
+}
+
+.astronautAbout {
+  margin-top: 8%;
+  margin-left: 45%;
+}
+.firstAbout {
+  position: absolute;
+    margin-top: 10%;
+    margin-left: 6%;;
+    font-size: 35px;
+    text-align: center;
+}
